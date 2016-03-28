@@ -1,0 +1,45 @@
+Set matrix size to 512
+Set block size to 16
+Set the number of threads is 16
+
+------------------------------------------------
+Start three nested loops - no blocking
+Starting matrix multiplication with 16 threads
+Total time using three nested loops -matrix_size: 512, -threads: 16, -no blocking taken by CPU: 4.780000
+Real_time:	0.335300
+Proc_time:	0.333934
+Total flpins:	33628006
+MFLOPS:		100.702560
+
+------------------------------------------------
+Start three nested loops - blocking
+Starting matrix multiple example with 16 threads
+Total time using three nested loops -matrix_size: 512, -block size: 16, -thread: 16, taken by CPU: 3.280000
+Real_time:	0.562978
+Proc_time:	0.561360
+Total flpins:	65319688
+MFLOPS:		139.360947
+
+------------------------------------------------
+Start Strassen MM -no blocking
+Total time using Strassen MM -matrix_size: 512, -no blocking, -thread: 16, taken by CPU: 4.190000
+Real_time:	1.360125
+Proc_time:	1.357769
+Total flpins:	233089872
+MFLOPS:		210.662506
+
+------------------------------------------------
+Start Strassen MM - blocking
+Total time using Strassen MM -matrix_size: 512, -block size: 8, -thread: 16, taken by CPU: 0.760000
+Real_time:	2.139407
+Proc_time:	2.136382
+Total flpins:	399732782
+MFLOPS:		214.028595
+
+------------------------------------------------
+Start MKL
+Total time using MKL -matrix_size: 512, -thread: 16, taken by CPU: 2.350000
+Real_time:	2.307710
+Proc_time:	2.302677
+Total flpins:	401861115
+MFLOPS:		12.799191

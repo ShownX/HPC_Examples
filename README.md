@@ -19,4 +19,9 @@ Due to using the MKL library as comparision in the code, so we only can use inte
 Command: icpc -I/path/to/papi/include -O0 matrixMultiplication.c /path/to/papi/lib/libpapi.a -o mm -fopenmp -mkl
 
 ### Usage:
-mm matrix_size block_size nthreads
+Command: mm matrix_size block_size nthreads
+
+### Expect results:
+When set matrix size = 512, block_size = 16, and number of threads = 16,
+result should be looked like this: **results/hw22_512_16_16.txt**
+The time & floating point operation could be vary from different computers.
