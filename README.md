@@ -16,10 +16,14 @@ Matrix and matrix multiplication using OpenMP.
 ### Build
 Due to using the MKL library as comparision in the code, so we only can use intel compiler to build the code. Otherwise, you should delete the header *"mkl.h"* and comment the function *matrixMultipilication_mkl*.
 
-Command: icpc -I/path/to/papi/include -O0 matrixMultiplication.c /path/to/papi/lib/libpapi.a -o mm -fopenmp -mkl
+```
+$ icpc -I/path/to/papi/include -O0 matrixMultiplication.c /path/to/papi/lib/libpapi.a -o mm -fopenmp -mkl
+```
 
 ### Usage:
-Command: mm matrix_size block_size nthreads
+```
+$ ./mm matrix_size block_size nthreads
+```
 
 ### Expect results:
 When set matrix size = 512, block_size = 16, and number of threads = 16,
